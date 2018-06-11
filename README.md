@@ -8,6 +8,20 @@ At the global level, ec2_group_conversion functional steps are:
   - Transform this dictionary in an ec2_group rules input array
   - Export the array to inbound_rules variable
   
+
+# Install procedure
+
+As a custom ansible module, it is possible to copy it in the Library folder. It is important to check "library" setting is correctly defined. 
+
+```
+$ cp ec2_group_conversion.py /etc/ansible/library
+
+$ vi ansible.cfg
+...
+library        = ./library
+...
+``` 
+
 # Module Example
 ```
 - ec2_group_conversion:
